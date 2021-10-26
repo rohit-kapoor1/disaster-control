@@ -1,75 +1,185 @@
 <html>
-<head>
-<title></title>
-<!-- Apply styles to html elements -->
-<style>
-*{
-margin:0; padding:0; boxsizing:border-box;
-}
-header{
-width: 100%; height: 100vh;
-background-color: white;
-background-repeat: no-repeat;
-background-size: cover;
-}
-nav{
-width: 100%; height: 15vh;
-background: black;
-display: flex; justify-content: space-between;
-align-items: center;
-}
-nav .mainmenu{
-width: 40%;
-display: flex; justify-content: space-around;
-}
-main{
-width: 100%; height: 85vh;
-display: flex; justify-content: center;
-align-items: center;
-text-align: center;
-}
-section h3{
-letter-spacing: 3px; font-weight: 200;
-}
-section h1{
-text-transform: uppercase;
-}
-section div{
-animation:changeborder 10s infinite linear;
-border: 7px solid red;
-}
-@keyframes changeborder{
-0%
-20%
-40%
-}
-</style>
-</head>
-<body>
-<!--Let us create a simple menu using the navigation tags-->
-<!--Use header to indicate that manu will be a part of header -->
-<header>
-<nav>
-<div class = "logo" <h3 style="color:white;">MYLOGO</h3></div>
-<!--Lets define the menu items now-->
-<div class = "mainmenu">
-<a href="https://hackr.io/tutorials/learn-html-5">Home</a>
-<a href="https://hackr.io/tutorials/learn-html-5">About Us</a>
-<a href="https://hackr.io/tutorials/learn-html-5">Contact Us</a>
-<a href="https://hackr.io/tutorials/learn-html-5">Our Projects</a>
-</div>
-</nav>
-<!--Let us create the main section now, if you are not using html5, use div tags-->
-<main>
-<section>
-<!--Check out the styling elements for this div class - change_text -->
-<div class = "change_text"><b>WELCOME TO XXX ELECTRONICS</b></div>
-<!--make text italic-->
-<p><i>All your electronics needs in one place</i></p><br>
-<!--create a button, if there is a form, you can specify an action on click-->
-<input type = button value = "view more">
-</section>
-</main>
-</header>
-</body>
+	<head>
+		<title>Test</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+		<!-- Apply styles to html elements -->
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			header {
+				width: 100%;
+				background-color: white;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			nav {
+				width: 100%;
+				height: 15vh;
+				background: black;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			nav .mainmenu {
+				width: 40%;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			.column {
+				flex-direction: column;
+			}
+			main {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			section h3 {
+				letter-spacing: 3px;
+				font-weight: 200;
+			}
+			section h1 {
+				text-transform: uppercase;
+			}
+			section div {
+				animation: changeborder 10s infinite linear;
+				border: 7px solid red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--Let us create a simple menu using the navigation tags-->
+		<!--Use header to indicate that manu will be a part of header -->
+		<header>
+			<nav>
+				<div class="logo"><h3 style="color: white">MYLOGO</h3></div>
+				<!--Lets define the menu items now-->
+				<div class="mainmenu">
+					<a href="https://hackr.io/tutorials/learn-html-5">Home</a>
+					<a href="https://hackr.io/tutorials/learn-html-5">About Us</a>
+					<a href="https://hackr.io/tutorials/learn-html-5">Contact Us</a>
+                    <a href="https://hackr.io/tutorials/learn-html-5">Projects</a>
+				</div>
+			</nav>
+		</header>
+		<!--Let us create the main section now, if you are not using html5, use div tags-->
+		<main class="flex column g-10 justify-between align-start column">
+			<section>
+				<!--Check out the styling elements for this div class - change_text -->
+				<div class="change_text"><b>WELCOME TO XXX ELECTRONICS</b></div>
+				<!--make text italic-->
+				<p><i>All your electronics needs in one place</i></p>
+				<br />
+				<!--create a button, if there is a form, you can specify an action on click-->
+				<input type="button" value="view more" />
+			</section>
+            <section>
+				<!--Check out the styling elements for this div class - change_text -->
+				<div class="change_text"><b>WELCOME TO our long Git demo</b></div>
+				<!--make text italic-->
+				<p><i>All your Git needs in one place</i></p>
+				<br />
+				<!--create a button, if there is a form, you can specify an action on click-->
+				<input type="button" value="view more" />
+			</section>
+            <section>
+				<!--Check out the styling elements for this div class - change_text -->
+				<div class="change_text"><b>WELCOME TO ArgilDX</b></div>
+				<!--make text italic-->
+				<p><i>All your IT needs in one place</i></p>
+				<br />
+				<!--create a button, if there is a form, you can specify an action on click-->
+				<input type="button" value="view more" />
+			</section>
+            
+			<!-- #2 -->
+			<div class="bg-white">
+				<div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+					<div class="text-center">
+						<h2 class="text-base font-semibold text-indigo-600 tracking-wide uppercase">
+							Pricing
+						</h2>
+						<p class="mt-1 text-4xl text-gray-900 sm:text-5xl sm:tracking-tight">
+							Take control of your team.
+						</p>
+						<p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+							Start building for free, then add a site plan to go live. Account plans
+							unlock additional features.
+						</p>
+					</div>
+					<button
+						id="change"
+						type="button"
+						class="
+							inline-flex
+							items-center
+							px-6
+							py-3
+							border border-transparent
+							text-base
+							font-medium
+							rounded-md
+							shadow-sm
+							text-white
+							bg-indigo-600
+							hover:bg-indigo-700
+							focus:outline-none
+							focus:ring-2
+							focus:ring-offset-2
+							focus:ring-indigo-500
+						"
+					>
+						Change Color
+					</button>
+				</div>
+			</div>
+
+			<!-- # 3 -->
+			<div class="relative bg-indigo-800">
+				<div class="absolute inset-0">
+					<img
+						class="w-full h-full object-cover"
+						src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
+						alt=""
+					/>
+					<div
+						class="absolute inset-0 bg-indigo-800 mix-blend-multiply"
+						aria-hidden="true"
+					></div>
+				</div>
+				<div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+					<h1
+						class="
+							text-4xl
+							font-extrabold
+							tracking-tight
+							text-white
+							sm:text-5xl
+							lg:text-6xl
+						"
+					>
+						Get in touch
+					</h1>
+					<p class="mt-6 text-xl text-indigo-100 max-w-3xl">
+						Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi
+						urna, arcu sociis eu. Orci vel lectus nisl eget eget ut consectetur. Sit
+						justo viverra non adipisicing elit distinctio.
+					</p>
+				</div>
+			</div>
+		</main>
+		<script>
+			const button = document.getElementById("change");
+			button.addEventListener("click", () => {
+				document.body.classList.toggle("bg-indigo-800");
+			});
+		</script>
+	</body>
 </html>
